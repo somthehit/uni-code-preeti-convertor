@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Preeti';
+  src: url('/fonts/Preeti.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kantipur';
+  src: url('/fonts/Kantipur.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #fbfdfc;
+  --foreground: #0f172a;
+}
+
+/* Compact typography scaling across the entire website */
+html {
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(180deg, rgba(236, 253, 245, 0.7) 0%, #ffffff 50%, rgba(236, 253, 245, 0.4) 100%);
+  min-height: 100vh;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Photorealistic Finger Typing Movement Keyframes (Seamless & Anatomical) */
+@keyframes fingerKeystrokeStrike {
+  0%, 100% {
+    transform: scaleY(1) translateY(0);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  }
+  35% {
+    transform: scaleY(1.06) translateY(-5px);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.28));
+  }
+  65% {
+    transform: scaleY(0.96) translateY(2px);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.22));
+  }
+}
+
+@keyframes thumbKeystrokeLeft {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  }
+  40% {
+    transform: rotate(-4deg) scale(1.03) translateY(-3px);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+  }
+  70% {
+    transform: rotate(2deg) scale(0.97) translateY(2px);
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  }
+}
+
+@keyframes thumbKeystrokeRight {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  }
+  40% {
+    transform: rotate(4deg) scale(1.03) translateY(-3px);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+  }
+  70% {
+    transform: rotate(-2deg) scale(0.97) translateY(2px);
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  }
+}
+
+@keyframes pinkyShiftPress {
+  0%, 100% {
+    transform: scaleY(0.96) translateY(2px);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+.animate-finger-strike {
+  animation: fingerKeystrokeStrike 0.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  z-index: 20;
+}
+
+.animate-thumb-strike-left {
+  animation: thumbKeystrokeLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  z-index: 20;
+}
+
+.animate-thumb-strike-right {
+  animation: thumbKeystrokeRight 0.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  z-index: 20;
+}
+
+.animate-pinky-shift-press {
+  animation: pinkyShiftPress 0.5s ease-in-out infinite alternate;
+  z-index: 20;
+}
+
+/* ==========================================================================
+   Professional Print Formatting for Converted Documents
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    font-size: 13pt !important;
+    line-height: 1.8 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide interactive web chrome, navbars, modals, toolbars */
+  header,
+  nav,
+  footer,
+  aside,
+  .no-print,
+  [data-no-print="true"] {
+    display: none !important;
+  }
+
+  /* Ensure Preeti font renders crisp and clean */
+  .font-preeti {
+    font-family: 'Preeti', sans-serif !important;
+    letter-spacing: normal !important;
+  }
+
+  .font-devanagari {
+    font-family: var(--font-mukta), 'Noto Sans Devanagari', sans-serif !important;
+  }
+
+  .printable-document-page {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* Prevent awkward page cuts */
+  h1, h2, h3, h4, .print-header {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .print-content {
+    orphans: 3;
+    widows: 3;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+
+

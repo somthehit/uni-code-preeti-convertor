@@ -1,0 +1,410 @@
+{
+  "totalWords": 123760,
+  "letters": [
+    "अ",
+    "आ",
+    "इ",
+    "ई",
+    "उ",
+    "ऊ",
+    "ऋ",
+    "ए",
+    "ऐ",
+    "ओ",
+    "औ",
+    "अं",
+    "अः",
+    "क",
+    "ख",
+    "ग",
+    "घ",
+    "ङ",
+    "च",
+    "छ",
+    "ज",
+    "झ",
+    "ञ",
+    "ट",
+    "ठ",
+    "ड",
+    "ढ",
+    "ण",
+    "त",
+    "थ",
+    "द",
+    "ध",
+    "न",
+    "प",
+    "फ",
+    "ब",
+    "भ",
+    "म",
+    "य",
+    "र",
+    "ल",
+    "व",
+    "श",
+    "ष",
+    "स",
+    "ह",
+    "क्ष",
+    "त्र",
+    "ज्ञ",
+    "श्र"
+  ],
+  "letterMap": [
+    {
+      "index": 0,
+      "letter": "अ",
+      "file": "shard_0.json",
+      "count": 8273
+    },
+    {
+      "index": 1,
+      "letter": "आ",
+      "file": "shard_1.json",
+      "count": 2655
+    },
+    {
+      "index": 2,
+      "letter": "इ",
+      "file": "shard_2.json",
+      "count": 556
+    },
+    {
+      "index": 3,
+      "letter": "ई",
+      "file": "shard_3.json",
+      "count": 72
+    },
+    {
+      "index": 4,
+      "letter": "उ",
+      "file": "shard_4.json",
+      "count": 2670
+    },
+    {
+      "index": 5,
+      "letter": "ऊ",
+      "file": "shard_5.json",
+      "count": 98
+    },
+    {
+      "index": 6,
+      "letter": "ऋ",
+      "file": "shard_6.json",
+      "count": 106
+    },
+    {
+      "index": 7,
+      "letter": "ए",
+      "file": "shard_7.json",
+      "count": 713
+    },
+    {
+      "index": 8,
+      "letter": "ऐ",
+      "file": "shard_8.json",
+      "count": 160
+    },
+    {
+      "index": 9,
+      "letter": "ओ",
+      "file": "shard_9.json",
+      "count": 519
+    },
+    {
+      "index": 10,
+      "letter": "औ",
+      "file": "shard_10.json",
+      "count": 208
+    },
+    {
+      "index": 11,
+      "letter": "अं",
+      "file": "shard_11.json",
+      "count": 142
+    },
+    {
+      "index": 12,
+      "letter": "अः",
+      "file": "shard_12.json",
+      "count": 1
+    },
+    {
+      "index": 13,
+      "letter": "क",
+      "file": "shard_13.json",
+      "count": 7391
+    },
+    {
+      "index": 14,
+      "letter": "ख",
+      "file": "shard_14.json",
+      "count": 2990
+    },
+    {
+      "index": 15,
+      "letter": "ग",
+      "file": "shard_15.json",
+      "count": 4066
+    },
+    {
+      "index": 16,
+      "letter": "घ",
+      "file": "shard_16.json",
+      "count": 1905
+    },
+    {
+      "index": 17,
+      "letter": "ङ",
+      "file": "shard_17.json",
+      "count": 158
+    },
+    {
+      "index": 18,
+      "letter": "च",
+      "file": "shard_18.json",
+      "count": 4251
+    },
+    {
+      "index": 19,
+      "letter": "छ",
+      "file": "shard_19.json",
+      "count": 2113
+    },
+    {
+      "index": 20,
+      "letter": "ज",
+      "file": "shard_20.json",
+      "count": 3749
+    },
+    {
+      "index": 21,
+      "letter": "झ",
+      "file": "shard_21.json",
+      "count": 1661
+    },
+    {
+      "index": 22,
+      "letter": "ञ",
+      "file": "shard_22.json",
+      "count": 3
+    },
+    {
+      "index": 23,
+      "letter": "ट",
+      "file": "shard_23.json",
+      "count": 1567
+    },
+    {
+      "index": 24,
+      "letter": "ठ",
+      "file": "shard_24.json",
+      "count": 964
+    },
+    {
+      "index": 25,
+      "letter": "ड",
+      "file": "shard_25.json",
+      "count": 1150
+    },
+    {
+      "index": 26,
+      "letter": "ढ",
+      "file": "shard_26.json",
+      "count": 907
+    },
+    {
+      "index": 27,
+      "letter": "ण",
+      "file": "shard_27.json",
+      "count": 2
+    },
+    {
+      "index": 28,
+      "letter": "त",
+      "file": "shard_28.json",
+      "count": 3224
+    },
+    {
+      "index": 29,
+      "letter": "थ",
+      "file": "shard_29.json",
+      "count": 1093
+    },
+    {
+      "index": 30,
+      "letter": "द",
+      "file": "shard_30.json",
+      "count": 4317
+    },
+    {
+      "index": 31,
+      "letter": "ध",
+      "file": "shard_31.json",
+      "count": 2045
+    },
+    {
+      "index": 32,
+      "letter": "न",
+      "file": "shard_32.json",
+      "count": 4665
+    },
+    {
+      "index": 33,
+      "letter": "प",
+      "file": "shard_33.json",
+      "count": 11419
+    },
+    {
+      "index": 34,
+      "letter": "फ",
+      "file": "shard_34.json",
+      "count": 2192
+    },
+    {
+      "index": 35,
+      "letter": "ब",
+      "file": "shard_35.json",
+      "count": 6417
+    },
+    {
+      "index": 36,
+      "letter": "भ",
+      "file": "shard_36.json",
+      "count": 3606
+    },
+    {
+      "index": 37,
+      "letter": "म",
+      "file": "shard_37.json",
+      "count": 6610
+    },
+    {
+      "index": 38,
+      "letter": "य",
+      "file": "shard_38.json",
+      "count": 1061
+    },
+    {
+      "index": 39,
+      "letter": "र",
+      "file": "shard_39.json",
+      "count": 3633
+    },
+    {
+      "index": 40,
+      "letter": "ल",
+      "file": "shard_40.json",
+      "count": 3642
+    },
+    {
+      "index": 41,
+      "letter": "व",
+      "file": "shard_41.json",
+      "count": 4206
+    },
+    {
+      "index": 42,
+      "letter": "श",
+      "file": "shard_42.json",
+      "count": 1601
+    },
+    {
+      "index": 43,
+      "letter": "ष",
+      "file": "shard_43.json",
+      "count": 87
+    },
+    {
+      "index": 44,
+      "letter": "स",
+      "file": "shard_44.json",
+      "count": 10740
+    },
+    {
+      "index": 45,
+      "letter": "ह",
+      "file": "shard_45.json",
+      "count": 3332
+    },
+    {
+      "index": 46,
+      "letter": "क्ष",
+      "file": "shard_46.json",
+      "count": 243
+    },
+    {
+      "index": 47,
+      "letter": "त्र",
+      "file": "shard_47.json",
+      "count": 249
+    },
+    {
+      "index": 48,
+      "letter": "ज्ञ",
+      "file": "shard_48.json",
+      "count": 85
+    },
+    {
+      "index": 49,
+      "letter": "श्र",
+      "file": "shard_49.json",
+      "count": 243
+    }
+  ],
+  "letterCounts": {
+    "अ": 8273,
+    "आ": 2655,
+    "इ": 556,
+    "ई": 72,
+    "उ": 2670,
+    "ऊ": 98,
+    "ऋ": 106,
+    "ए": 713,
+    "ऐ": 160,
+    "ओ": 519,
+    "औ": 208,
+    "अं": 142,
+    "अः": 1,
+    "क": 7391,
+    "ख": 2990,
+    "ग": 4066,
+    "घ": 1905,
+    "ङ": 158,
+    "च": 4251,
+    "छ": 2113,
+    "ज": 3749,
+    "झ": 1661,
+    "ञ": 3,
+    "ट": 1567,
+    "ठ": 964,
+    "ड": 1150,
+    "ढ": 907,
+    "ण": 2,
+    "त": 3224,
+    "थ": 1093,
+    "द": 4317,
+    "ध": 2045,
+    "न": 4665,
+    "प": 11419,
+    "फ": 2192,
+    "ब": 6417,
+    "भ": 3606,
+    "म": 6610,
+    "य": 1061,
+    "र": 3633,
+    "ल": 3642,
+    "व": 4206,
+    "श": 1601,
+    "ष": 87,
+    "स": 10740,
+    "ह": 3332,
+    "क्ष": 243,
+    "त्र": 249,
+    "ज्ञ": 85,
+    "श्र": 243
+  },
+  "generatedAt": "2026-11-14T03:14:57.783Z"
+}
