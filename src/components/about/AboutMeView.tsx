@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Github,
   Mail,
@@ -19,6 +19,8 @@ import {
   ExternalLink,
   MapPin,
   CheckCircle2,
+  X,
+  ZoomIn,
 } from 'lucide-react';
 
 interface AboutMeViewProps {
@@ -26,6 +28,7 @@ interface AboutMeViewProps {
 }
 
 export const AboutMeView: React.FC<AboutMeViewProps> = ({ onNavigateTab }) => {
+  const [isPhotoModalOpen, setIsPhotoModalOpen] = useState<boolean>(false);
   return (
     <div className="w-full max-w-5xl mx-auto flex flex-col gap-8 pb-12 animate-fadeIn">
       {/* Hero Developer Card */}
@@ -35,14 +38,25 @@ export const AboutMeView: React.FC<AboutMeViewProps> = ({ onNavigateTab }) => {
 
         <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 text-center md:text-left">
           {/* Avatar with Glow & Flag Badge */}
-          <div className="relative group shrink-0">
+          <div
+            onClick={() => setIsPhotoModalOpen(true)}
+            title="पूर्ण तस्विर हेर्न क्लिक गर्नुहोस् (Click to view full photo)"
+            className="relative group shrink-0 cursor-pointer"
+          >
             <div className="w-28 h-28 md:w-36 md:h-36 rounded-3xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-amber-400 p-1 shadow-xl group-hover:scale-105 transition-transform duration-300">
-              <div className="w-full h-full rounded-[22px] bg-slate-900 flex flex-col items-center justify-center text-4xl md:text-5xl font-black text-emerald-400 select-none">
-                <span>ने</span>
-                <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1">Dev</span>
+              <div className="w-full h-full rounded-[22px] overflow-hidden bg-slate-900 relative">
+                <img
+                  src="/images/about_me.jpg"
+                  alt="Som (somthehit) - Software Engineer & Developer"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  style={{ objectPosition: '75% 30%' }}
+                />
+                <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <ZoomIn className="w-6 h-6 text-white drop-shadow-md" />
+                </div>
               </div>
             </div>
-            <span className="absolute -bottom-2 -right-2 px-2.5 py-0.5 bg-rose-600 text-white text-xs font-bold rounded-full shadow-md border-2 border-slate-900 flex items-center gap-1">
+            <span className="absolute -bottom-2 -right-2 px-2.5 py-0.5 bg-rose-600 text-white text-xs font-bold rounded-full shadow-md border-2 border-slate-900 flex items-center gap-1 z-10">
               🇳🇵 नेपाल
             </span>
           </div>
@@ -65,7 +79,7 @@ export const AboutMeView: React.FC<AboutMeViewProps> = ({ onNavigateTab }) => {
             </h1>
 
             <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl font-medium">
-              नमस्ते! म नेपाली प्रविधि, खुला स्रोत (Open Source) र डिजिटल भाषिक सशक्तिकरणमा समर्पित सफ्टवेयर विकासकर्ता हुँ। 
+              नमस्ते! म नेपाली प्रविधि, खुला स्रोत (Open Source) र डिजिटल भाषिक सशक्तिकरणमा समर्पित सफ्टवेयर विकासकर्ता हुँ।
               मैले नेपाली भाषा, परम्परागत प्रिती फन्ट, युनिकोड र टाइपिङ शिक्षालाई विश्वभरका नेपालीहरूका लागि सहज र निःशुल्क बनाउन यो बृहत् प्लेटफर्म निर्माण गरेको हुँ।
             </p>
 
@@ -114,7 +128,7 @@ export const AboutMeView: React.FC<AboutMeViewProps> = ({ onNavigateTab }) => {
             </div>
             <h2 className="text-xl font-black text-slate-900">यस परियोजनाको प्रेरणा र उद्देश्य</h2>
             <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              नेपालमा अझै पनि सरकारी कार्यालय, विद्यालय, अदालत, सञ्चारमाध्यम तथा प्रेसहरूमा <strong>Preeti</strong> फन्ट व्यापक रूपमा प्रयोग गरिन्छ; जबकि इन्टरनेट र सामाजिक सञ्जालमा <strong>युनिकोड (Devanagari)</strong> अनिवार्य छ। 
+              नेपालमा अझै पनि सरकारी कार्यालय, विद्यालय, अदालत, सञ्चारमाध्यम तथा प्रेसहरूमा <strong>Preeti</strong> फन्ट व्यापक रूपमा प्रयोग गरिन्छ; जबकि इन्टरनेट र सामाजिक सञ्जालमा <strong>युनिकोड (Devanagari)</strong> अनिवार्य छ।
               दुई फन्टबीचको रूपान्तरण गर्दा धेरै प्रयोगकर्ताहरूले अक्षर बिग्रने, आधा अक्षर हराउने वा असुरक्षित वेबसाइटहरूमा संवेदनशील कागजात पेस्ट गर्नुपर्ने जोखिम भोगिरहेका थिए।
             </p>
             <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
@@ -299,6 +313,36 @@ export const AboutMeView: React.FC<AboutMeViewProps> = ({ onNavigateTab }) => {
           </a>
         </div>
       </div>
+
+      {/* Full Photo Modal */}
+      {isPhotoModalOpen && (
+        <div
+          onClick={() => setIsPhotoModalOpen(false)}
+          className="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn cursor-pointer"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-sm md:max-w-md w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-700 animate-scaleUp"
+          >
+            <button
+              type="button"
+              onClick={() => setIsPhotoModalOpen(false)}
+              className="absolute top-3 right-3 z-10 p-2 bg-slate-900/80 hover:bg-slate-900 text-white rounded-full shadow-md transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <img
+              src="/images/about_me.jpg"
+              alt="Som (somthehit) - Nepal Pokhara"
+              className="w-full h-auto max-h-[80vh] object-contain rounded-3xl"
+            />
+            <div className="p-4 bg-slate-900/90 text-center border-t border-slate-800">
+              <span className="text-xs font-bold text-emerald-400">Som (somthehit)</span>
+              <span className="text-[11px] text-slate-400 block mt-0.5">Wander, Explore, Discover — Pokhara, Nepal 🇳🇵</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

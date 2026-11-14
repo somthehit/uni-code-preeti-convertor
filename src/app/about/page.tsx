@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'विकासकर्ताको बारेमा (About Developer) - Som (somthehit)',
     description:
       'नेपाली अनुवादक, बृहत् शब्दकोश र टाइपिङ मास्टर प्लेटफर्मका विकासकर्ता Som को परिचय र खुला स्रोत यात्रा।',
-    url: 'https://uni-code-preeti-convertor.vercel.app/about',
+    url: 'https://unicodesom.vercel.app/about',
     type: 'profile',
   },
 };
