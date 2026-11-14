@@ -15,6 +15,7 @@ import { PreetiVirtualKeyboard } from '@/components/virtual-keyboard/PreetiVirtu
 import { CheatsheetModal } from '@/components/cheatsheet/CheatsheetModal';
 import { GeminiConfigModal } from '@/components/ai/GeminiConfigModal';
 import { NepaliDictionaryView } from '@/components/dictionary/NepaliDictionaryView';
+import { AdBanner } from '@/components/ads/AdBanner';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('converter');
@@ -62,6 +63,9 @@ export default function Home() {
 
       {/* Main Content Area - Wide Full-Container Workspace */}
       <main className="flex-1 max-w-[1400px] w-full mx-auto px-3 md:px-6 py-4 print:p-0 print:m-0 print:max-w-none print:w-full">
+        {/* Top Responsive Ad / Sponsor Banner */}
+        <AdBanner slot="top-banner" onNavigateToTab={(tab) => setActiveTab(tab as any)} />
+
         <div className={activeTab === 'converter' ? 'block' : 'hidden'}>
           <DualPaneConverter
             onToggleVirtualKeyboard={() => setIsVirtualKeyboardOpen(!isVirtualKeyboardOpen)}
@@ -123,6 +127,9 @@ export default function Home() {
             <NepaliOcrTool />
           </div>
         </div>
+
+        {/* Mid-Content Responsive Ad / Sponsor Banner */}
+        <AdBanner slot="mid-banner" onNavigateToTab={(tab) => setActiveTab(tab as any)} />
       </main>
 
       {/* Preeti Virtual Keyboard Drawer */}
