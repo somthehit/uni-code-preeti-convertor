@@ -12,7 +12,8 @@ export type ActiveTab =
   | 'multi_font'
   | 'number_currency'
   | 'date_converter'
-  | 'cleaner_ocr';
+  | 'cleaner_ocr'
+  | 'about';
 
 interface TopNavbarProps {
   activeTab: ActiveTab;
@@ -34,6 +35,7 @@ const NAV_TABS = [
   { id: 'number_currency' as ActiveTab, label: '🔢 अङ्क र अक्षर (चेक/भौचर)' },
   { id: 'date_converter' as ActiveTab, label: '📅 मिति रूपान्तरण (BS ↔ AD)' },
   { id: 'cleaner_ocr' as ActiveTab, label: '✨ टेक्स्ट क्लिनर र OCR' },
+  { id: 'about' as ActiveTab, label: '👨‍💻 मेरो बारेमा (About Me)' },
 ];
 
 export const TopNavbar: React.FC<TopNavbarProps> = ({

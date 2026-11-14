@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://uni-code-preeti-convertor.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://unicodesom.vercel.app';
   const currentDate = new Date().toISOString();
 
   return [
@@ -46,6 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
   ];
 }

@@ -16,6 +16,7 @@ import { CheatsheetModal } from '@/components/cheatsheet/CheatsheetModal';
 import { GeminiConfigModal } from '@/components/ai/GeminiConfigModal';
 import { NepaliDictionaryView } from '@/components/dictionary/NepaliDictionaryView';
 import { AdBanner } from '@/components/ads/AdBanner';
+import { AboutMeView } from '@/components/about/AboutMeView';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('converter');
@@ -128,6 +129,10 @@ export default function Home() {
           </div>
         </div>
 
+        <div className={activeTab === 'about' ? 'block' : 'hidden'}>
+          <AboutMeView onNavigateTab={(tab) => setActiveTab(tab as any)} />
+        </div>
+
         {/* Mid-Content Responsive Ad / Sponsor Banner */}
         <AdBanner slot="mid-banner" onNavigateToTab={(tab) => setActiveTab(tab as any)} />
       </main>
@@ -175,8 +180,16 @@ export default function Home() {
             १००% सुरक्षित र क्लाइन्ट-साइड — कुनै पनि डेटा सर्भरमा पठाउँदैन। पूर्ण अफलाइन क्षमता।
           </p>
 
-          <div className="text-emerald-700 font-bold">
-            नेपालमै निर्मित 🇳🇵
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setActiveTab('about')}
+              className="text-emerald-700 hover:text-emerald-800 font-bold transition-colors cursor-pointer flex items-center gap-1"
+            >
+              <span>👨‍💻 विकासकर्ताको बारेमा</span>
+            </button>
+            <span className="text-slate-300">|</span>
+            <span className="text-emerald-700 font-bold">नेपालमै निर्मित 🇳🇵</span>
           </div>
         </div>
       </footer>
